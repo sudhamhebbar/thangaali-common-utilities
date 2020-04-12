@@ -1,4 +1,4 @@
-package Model;
+package com.thangaali.common.utils.model;
 
 
 
