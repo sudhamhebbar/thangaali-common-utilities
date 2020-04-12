@@ -8,10 +8,7 @@ import java.util.HashMap;
 public class BookingModel {
     private Long bookingId;
     private Long customerId;
-    private HashMap<Long,Boolean> roomInfo ;
-
     private Long numberOfPeople;
-
     private Date bookingDate;
     private Date fromDate;
     private Date toDate;
@@ -21,10 +18,9 @@ public class BookingModel {
     public BookingModel() {
     }
 
-    public BookingModel(Long bookingId, Long customerId, HashMap<Long, Boolean> roomInfo, Long numberOfPeople, Date bookingDate, Date fromDate, Date toDate, Long numberOfDays, String bookedBy) {
+    public BookingModel(Long bookingId, Long customerId, Long numberOfPeople, Date bookingDate, Date fromDate, Date toDate, Long numberOfDays, String bookedBy) {
         this.bookingId = bookingId;
         this.customerId = customerId;
-        this.roomInfo = roomInfo;
         this.numberOfPeople = numberOfPeople;
         this.bookingDate = bookingDate;
         this.fromDate = fromDate;
@@ -47,14 +43,6 @@ public class BookingModel {
 
     public void setCustomerId(Long customerId) {
         this.customerId = customerId;
-    }
-
-    public HashMap<Long, Boolean> getRoomInfo() {
-        return roomInfo;
-    }
-
-    public void setRoomInfo(HashMap<Long, Boolean> roomInfo) {
-        this.roomInfo = roomInfo;
     }
 
     public Long getNumberOfPeople() {
