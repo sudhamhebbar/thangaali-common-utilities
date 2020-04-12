@@ -3,13 +3,15 @@ package Model;
 
 
 import java.util.Date;
+import java.util.HashMap;
 
 public class BookingModel {
     private Long bookingId;
     private Long customerId;
-    private Long roomId;
+    private HashMap<Long,Boolean> roomInfo ;
+
     private Long numberOfPeople;
-    private Boolean extraBed;
+
     private Date bookingDate;
     private Date fromDate;
     private Date toDate;
@@ -19,12 +21,11 @@ public class BookingModel {
     public BookingModel() {
     }
 
-    public BookingModel(Long bookingId, Long customerId, Long roomId, Long numberOfPeople, Boolean extraBed, Date bookingDate, Date fromDate, Date toDate, Long numberOfDays, String bookedBy) {
+    public BookingModel(Long bookingId, Long customerId, HashMap<Long, Boolean> roomInfo, Long numberOfPeople, Date bookingDate, Date fromDate, Date toDate, Long numberOfDays, String bookedBy) {
         this.bookingId = bookingId;
         this.customerId = customerId;
-        this.roomId = roomId;
+        this.roomInfo = roomInfo;
         this.numberOfPeople = numberOfPeople;
-        this.extraBed = extraBed;
         this.bookingDate = bookingDate;
         this.fromDate = fromDate;
         this.toDate = toDate;
@@ -48,12 +49,12 @@ public class BookingModel {
         this.customerId = customerId;
     }
 
-    public Long getRoomId() {
-        return roomId;
+    public HashMap<Long, Boolean> getRoomInfo() {
+        return roomInfo;
     }
 
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
+    public void setRoomInfo(HashMap<Long, Boolean> roomInfo) {
+        this.roomInfo = roomInfo;
     }
 
     public Long getNumberOfPeople() {
@@ -62,14 +63,6 @@ public class BookingModel {
 
     public void setNumberOfPeople(Long numberOfPeople) {
         this.numberOfPeople = numberOfPeople;
-    }
-
-    public Boolean getExtraBed() {
-        return extraBed;
-    }
-
-    public void setExtraBed(Boolean extraBed) {
-        this.extraBed = extraBed;
     }
 
     public Date getBookingDate() {
@@ -110,7 +103,5 @@ public class BookingModel {
 
     public void setBookedBy(String bookedBy) {
         this.bookedBy = bookedBy;
-
     }
-
 }
