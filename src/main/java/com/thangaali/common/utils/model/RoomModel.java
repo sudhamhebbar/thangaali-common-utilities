@@ -1,47 +1,37 @@
 package com.thangaali.common.utils.model;
 
 public class RoomModel {
-    private Long id;
-    private String type;
-    private String name;
+    private Long roomId;
+    private String roomName;
     private Long numberOfPeople;
-    private Long weekendPrice;
-    private Long weekdayPrice;
+    private Long price;
+    private Long extraBedPrice;
 
     public RoomModel() {
     }
 
-    public RoomModel(Long id, String type, String name, Long numberOfPeople, Long weekendPrice, Long weekdayPrice) {
-        this.id = id;
-        this.type = type;
-        this.name = name;
+    public RoomModel(Long roomId, String roomName, Long numberOfPeople, Long price, Long extraBedPrice) {
+        this.roomId = roomId;
+        this.roomName = roomName;
         this.numberOfPeople = numberOfPeople;
-        this.weekendPrice = weekendPrice;
-        this.weekdayPrice = weekdayPrice;
+        this.price = price;
+        this.extraBedPrice = extraBedPrice;
     }
 
-    public Long getId() {
-        return id;
+    public Long getRoomId() {
+        return roomId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setRoomId(Long roomId) {
+        this.roomId = roomId;
     }
 
-    public String getType() {
-        return type;
+    public String getRoomName() {
+        return roomName;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     public Long getNumberOfPeople() {
@@ -52,19 +42,19 @@ public class RoomModel {
         this.numberOfPeople = numberOfPeople;
     }
 
-    public Long getWeekendPrice() {
-        return weekendPrice;
+    public Long getPrice() {
+        return price;
     }
 
-    public void setWeekendPrice(Long weekendPrice) {
-        this.weekendPrice = weekendPrice;
+    public void setPrice(Long price) {
+        this.price = price;
     }
 
-    public Long getWeekdayPrice() {
-        return weekdayPrice;
+    public Long getExtraBedPrice() {
+        return extraBedPrice;
     }
 
-    public void setWeekdayPrice(Long weekdayPrice) {
-        this.weekdayPrice = weekdayPrice;
+    public void setExtraBedPrice(Long extraBedPrice) {
+        this.extraBedPrice = extraBedPrice;
     }
 }

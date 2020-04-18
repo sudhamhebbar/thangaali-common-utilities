@@ -1,29 +1,29 @@
 package com.thangaali.common.utils.model;
 
 public class CustomerModel {
-    private Long id;
+    private Long customerId;
     private String fullName;
     private String city;
-    private String email;
-    private String phone;
+    private String emailAddress;
+    private String phoneNumber;
 
     public CustomerModel() {
     }
 
-    public CustomerModel(Long id, String fullName, String city, String email, String phone) {
-        this.id = id;
+    public CustomerModel(Long customerId, String fullName, String city, String emailAddress, String phoneNumber) {
+        this.customerId = customerId;
         this.fullName = fullName;
         this.city = city;
-        this.email = email;
-        this.phone = phone;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
     }
 
-    public Long getId() {
-        return id;
+    public Long getCustomerId() {
+        return customerId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
 
     public String getFullName() {
@@ -42,19 +42,19 @@ public class CustomerModel {
         this.city = city;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }
