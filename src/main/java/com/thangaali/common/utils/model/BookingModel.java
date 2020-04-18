@@ -1,32 +1,29 @@
 package com.thangaali.common.utils.model;
 
-
-
 import java.util.Date;
-import java.util.HashMap;
 
 public class BookingModel {
     private Long bookingId;
     private Long customerId;
-    private Long numberOfPeople;
     private Date bookingDate;
-    private Date fromDate;
-    private Date toDate;
-    private Long numberOfDays;
+    private Long numberOfPeople;
+    private Date checkInDate;
+    private Date checkOutDate;
     private String bookedBy;
+    private Long numberOfDays;
 
     public BookingModel() {
     }
 
-    public BookingModel(Long bookingId, Long customerId, Long numberOfPeople, Date bookingDate, Date fromDate, Date toDate, Long numberOfDays, String bookedBy) {
+    public BookingModel(Long bookingId, Long customerId, Date bookingDate, Long numberOfPeople, Date checkInDate, Date checkOutDate, String bookedBy, Long numberOfDays) {
         this.bookingId = bookingId;
         this.customerId = customerId;
-        this.numberOfPeople = numberOfPeople;
         this.bookingDate = bookingDate;
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-        this.numberOfDays = numberOfDays;
+        this.numberOfPeople = numberOfPeople;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
         this.bookedBy = bookedBy;
+        this.numberOfDays = numberOfDays;
     }
 
     public Long getBookingId() {
@@ -45,14 +42,6 @@ public class BookingModel {
         this.customerId = customerId;
     }
 
-    public Long getNumberOfPeople() {
-        return numberOfPeople;
-    }
-
-    public void setNumberOfPeople(Long numberOfPeople) {
-        this.numberOfPeople = numberOfPeople;
-    }
-
     public Date getBookingDate() {
         return bookingDate;
     }
@@ -61,28 +50,28 @@ public class BookingModel {
         this.bookingDate = bookingDate;
     }
 
-    public Date getFromDate() {
-        return fromDate;
+    public Long getNumberOfPeople() {
+        return numberOfPeople;
     }
 
-    public void setFromDate(Date fromDate) {
-        this.fromDate = fromDate;
+    public void setNumberOfPeople(Long numberOfPeople) {
+        this.numberOfPeople = numberOfPeople;
     }
 
-    public Date getToDate() {
-        return toDate;
+    public Date getCheckInDate() {
+        return checkInDate;
     }
 
-    public void setToDate(Date toDate) {
-        this.toDate = toDate;
+    public void setCheckInDate(Date checkInDate) {
+        this.checkInDate = checkInDate;
     }
 
-    public Long getNumberOfDays() {
-        return numberOfDays;
+    public Date getCheckOutDate() {
+        return checkOutDate;
     }
 
-    public void setNumberOfDays(Long numberOfDays) {
-        this.numberOfDays = numberOfDays;
+    public void setCheckOutDate(Date checkOutDate) {
+        this.checkOutDate = checkOutDate;
     }
 
     public String getBookedBy() {
@@ -91,5 +80,13 @@ public class BookingModel {
 
     public void setBookedBy(String bookedBy) {
         this.bookedBy = bookedBy;
+    }
+
+    public Long getNumberOfDays() {
+        return numberOfDays;
+    }
+
+    public void setNumberOfDays(Long numberOfDays) {
+        this.numberOfDays = numberOfDays;
     }
 }
